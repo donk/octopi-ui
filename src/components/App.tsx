@@ -1,10 +1,13 @@
 import React, { useRef, useState } from 'react';
 import useAsyncEffect from 'use-async-effect';
 import styled from 'styled-components';
+import * as api from '../lib/octoApi';
 
 import GlobalStyles from '../styles/global';
 
+import PreviewBar from './PreviewBar';
 import StatBar from './StatBar';
+import StatBox from './StatBox';
 
 const StyledApp = styled.div`
   display: flex;
@@ -19,7 +22,7 @@ const App: React.FC = () => {
   const [stats, setStats] = useState();
 
   const fetchStats = async () => {
-    const response = await fetch('http://localhost:3101/stats').then(res => res.json());
+    const response = await api.fetchStats();
     setStats(response);
   };
 
@@ -37,7 +40,11 @@ const App: React.FC = () => {
     <>
       <GlobalStyles />
       <StyledApp>
-        <StatBar {...stats} />
+        <StatBox {...stats} />
+        <div className="App__bottom">
+          <PreviewBar />
+          <StatBar {...stats} />
+        </div>
       </StyledApp>
     </>
   );

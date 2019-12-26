@@ -2,7 +2,6 @@
   "name": "octo-twitch",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3100",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -13,6 +12,8 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/styled-components": "^4.4.1",
+    "axios": "^0.19.0",
+    "cross-env": "^6.0.3",
     "moment": "^2.24.0",
     "moment-duration-format": "^2.3.2",
     "react": "^16.12.0",
@@ -23,7 +24,7 @@
     "use-async-effect": "^2.2.1"
   },
   "scripts": {
-    "start": "PORT=3101 react-scripts start",
+    "start": "cross-env PORT=3100 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

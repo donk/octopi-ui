@@ -2,6 +2,7 @@
 # OctoPi UI
 
 A UI to display information about your 3d prints on stream/video overlays
+![Example UI Image](https://i.neon.pw/93B2F9)
 
 ## Prerequisites
 
@@ -17,7 +18,6 @@ To get started, you'll need a few softwares, and some information about your Pi
 
 **Step 1:**
 You can either clone the repository, or download a ZIP and extract to any directory
-
 
 **Step 2:**
 Navigate to the directory you extracted/cloned to in Terminal/CMD/Powershell and install the packages with 
@@ -48,6 +48,7 @@ Saving after changes should automatically refresh the display on stream/browser,
 
 ## Something not working?
 This project is still in the early stages, so some error reporting and such is missing. If you run into any issues, get in touch and we can figure it out!
+
 
 **'Loading...' the only thing you're seeing?**
 If you're only seeing the loading screen, chances are the app is unable to contact the Octoprint server. Double check the IP address is correct (test in browser) and make sure the port is included similarly to the example env file. Default port is usually 5000.

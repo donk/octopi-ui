@@ -6,7 +6,7 @@ import STLViewer from './STLViewer';
 import { FOREGROUND_COLOR, BACKGROUND_COLOR } from '../config';
 
 const MODEL_SIZE = [352,210]; 
-const CAMERA_SIZE = [542, 307];
+const CAMERA_SIZE = [442, 210];
 
 const StyledPreviewBar = styled.div`
   display: flex;
@@ -23,6 +23,7 @@ const StyledPreviewBar = styled.div`
     align-self:flex-end;
     transition:border-color 0.1s linear;
     animation:rainbow 0.3s infinite;
+    position:relative;
   }
 
   .PreviewBar__camera {
@@ -35,6 +36,17 @@ const StyledPreviewBar = styled.div`
     transition:border-color 0.1s linear;
     animation:rainbow 0.3s infinite;
   }
+
+  #mad-0, #mad-0 *{
+    min-width:${MODEL_SIZE[0]}px !important;
+    max-width:${MODEL_SIZE[0]}px !important;
+    min-height:${MODEL_SIZE[1]}px !important;
+    max-height:${MODEL_SIZE[1]}px !important;
+  }
+
+  #mad-0 .box{
+    display:none !important;
+  }
 `;
 
 interface Props {}
@@ -42,7 +54,7 @@ interface Props {}
 const PreviewBar: FC<Props> = ({}) => {
   return (
     <StyledPreviewBar>
-      <div className="PreviewBar__model"></div>
+      <div className="PreviewBar__model"><STLViewer></STLViewer></div>
       <div className="PreviewBar__camera"></div>
     </StyledPreviewBar>
   );

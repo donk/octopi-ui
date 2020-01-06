@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 import { API_KEY, OCTO_URL } from '../config';
-console.log(OCTO_URL);
+console.log("Octoprint URL: ",OCTO_URL);
 
 const api = axios.create({
   baseURL: OCTO_URL,

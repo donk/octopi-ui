@@ -1,16 +1,16 @@
-/* global Madeleine */
 import React, { useEffect } from 'react';
 declare const Madeleine: any;
 
 const STLViewer = () => {
 
    useEffect(() => {
-    console.log('Madeleine init');
-    var tst = new Madeleine({
+
+
+   var madeleine = new Madeleine({
       target: 'target',
-      data: './models/pikachu.stl',
+      data: './models/pikachu.stl'
     });
-    console.log(tst);
+    madeleine.adaptViewerTheme('soft');
    }, []);
 
    return <div id="target"></div>;

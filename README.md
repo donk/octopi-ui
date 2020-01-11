@@ -27,10 +27,10 @@ Navigate to the directory you extracted/cloned to in Terminal/CMD/Powershell and
 Once the packages are installed, create a file named `.env` in the root directory and either copy the content from `.env.sample` or below and replace the values as needed:
 
     # Create a file named '.env' and copy the contents of this file over and replace with the proper values
-    REACT_APP_API_KEY="AC503FG3PL2MFZL004LS"      # Replace with your octoprint API key (http://docs.octoprint.org/en/master/api/general.html) for more info
-    REACT_APP_OCTO_URL="http://192.168.1.43:5000"      # Replace with your octoprint's IP (When you boot the pi with a monitor attached, it'll show it's IP)
-    REACT_APP_FOREGROUND_COLOR="#f7bf4a"          # Border, progress bar, and header color
-    REACT_APP_BACKGROUND_COLOR="#141517"          # Background color
+    REACT_APP_API_KEY=AC503FG3PL2MFZL004LS
+    REACT_APP_OCTO_URL=http://192.168.1.43:5000
+    REACT_APP_FOREGROUND_COLOR=#f7bf4a
+    REACT_APP_BACKGROUND_COLOR=#141517
 
 You'll need to know the API key and IP address the Raspberry Pi is running Octoprint on and replace the values on line 2 and 3.
 
